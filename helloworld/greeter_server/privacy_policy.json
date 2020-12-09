@@ -1,0 +1,20 @@
+{
+  "Policies": [
+    {
+      "Message": "HelloRequest",
+      "Field": "Name",
+      "Conditions": {
+        "Printing": [{
+            "allowed": false,
+            "if": "main.unsafeLogger"
+        }]
+      }
+    }
+  ],
+  "RequestValidation": [{
+    "MethodName": "/helloworld.Greeter/SayHello",
+    "MatchingContext": {
+      "region": ["us-east-1"]
+    }
+  }]
+}
